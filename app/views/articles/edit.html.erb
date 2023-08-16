@@ -1,0 +1,15 @@
+<div class="container my-5 d-flex justify-content-center">
+  <div>
+    <h1>Edit this article</h1>
+      <div class="d-flex justify-content-center">
+        <%= form_with model: @article, class:"form-group mb-3" do |f| %>
+
+          <%= f.label :title, class:"form-label" %>
+          <%= f.text_field :title, class:"form-control mb-3" %>
+          <%= f.label :content, class:"form-label" %>
+          <%= f.text_field :content, class:"form-control form-control-lg mb-3" %>
+          <%= f.submit "Update article", class:"btn btn-primary" %>
+        <% end %>
+      </div>
+  </div>
+</div>

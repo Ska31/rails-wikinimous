@@ -1,0 +1,20 @@
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+  <div class="d-flex justif-content-between">
+      <a class="navbar-brand" href="/">Wikinimous Copy Cat</a>
+    </div>
+    <div>
+    <%= link_to "New article", new_article_path, class:"text-decoration-none text-dark" %>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <% @articles.each do |article| %>
+    <div class="d-flex justify-content-start my-3">
+      <ul>
+        <li class="list-unstyled text-primary fs-2"><%= link_to "#{article.title}", article_path(article) %></li>
+        <li class="list-unstyled fs-5"><%= article.content %></li>
+      </ul>
+    </div>
+  <% end %>
+</div>
